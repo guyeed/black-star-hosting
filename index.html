@@ -1,0 +1,274 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d18">
+  <meta name="description" content="Black Star Hosting - لوحة استضافة بوتات Discord">
+  <title>Black Star Hosting</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #080d18;
+      --panel: #101a2b;
+      --blue: #2589ff;
+      --text: #f4f7ff;
+      --muted: #a4b1c8;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, sans-serif;
+      line-height: 1.8;
+    }
+
+    header {
+      padding: 18px 7%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      border-bottom: 1px solid #1b2a42;
+    }
+
+    .logo { font-size: 19px; font-weight: 800; }
+    .logo span { color: var(--blue); }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-right: 16px;
+      font-size: 14px;
+    }
+
+    a, button { -webkit-tap-highlight-color: transparent; }
+
+    .hero {
+      max-width: 950px;
+      margin: auto;
+      padding: 85px 22px 55px;
+      text-align: center;
+    }
+
+    .tag {
+      color: #8dc2ff;
+      background: #102744;
+      display: inline-block;
+      padding: 5px 14px;
+      border-radius: 30px;
+      font-size: 13px;
+    }
+
+    h1 {
+      font-size: clamp(32px, 7vw, 58px);
+      line-height: 1.35;
+      margin: 22px 0 14px;
+    }
+
+    h1 span { color: var(--blue); }
+
+    .hero p {
+      color: var(--muted);
+      max-width: 590px;
+      margin: 0 auto 26px;
+    }
+
+    .btn {
+      display: inline-block;
+      border: 0;
+      border-radius: 10px;
+      padding: 12px 23px;
+      background: var(--blue);
+      color: white;
+      text-decoration: none;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .btn.secondary {
+      background: #16243a;
+      border: 1px solid #293c59;
+      margin-right: 8px;
+    }
+
+    main { padding: 0 7% 70px; }
+
+    .preview {
+      max-width: 780px;
+      margin: 20px auto 70px;
+      padding: 22px;
+      background: linear-gradient(145deg, #111e32, #0b1321);
+      border: 1px solid #233957;
+      border-radius: 18px;
+      box-shadow: 0 20px 70px #0005;
+    }
+
+    .preview-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .status { color: #65e6a1; font-size: 13px; }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .stat {
+      background: #101b2d;
+      padding: 18px 12px;
+      border: 1px solid #1e304a;
+      border-radius: 12px;
+    }
+
+    .stat small { color: var(--muted); }
+    .stat h3 { margin: 8px 0 0; font-size: 23px; }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .section-title p { color: var(--muted); }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .feature {
+      background: var(--panel);
+      border: 1px solid #20304a;
+      border-radius: 14px;
+      padding: 22px;
+    }
+
+    .feature .icon { font-size: 27px; }
+    .feature p { color: var(--muted); font-size: 14px; }
+
+    .notice {
+      max-width: 760px;
+      margin: 35px auto 0;
+      padding: 14px 18px;
+      border: 1px solid #293b55;
+      border-radius: 12px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      border-top: 1px solid #1b2a42;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 650px) {
+      header { padding: 14px 5%; }
+      nav a { margin-right: 8px; font-size: 12px; }
+      .hero { padding-top: 60px; }
+      .features { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: 1fr; }
+      .stat { display: flex; justify-content: space-between; align-items: center; }
+      .stat h3 { font-size: 20px; }
+      main { padding-inline: 5%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">BLACK STAR <span>HOSTING</span></div>
+    <nav>
+      <a href="#home">الرئيسية</a>
+      <a href="#features">المميزات</a>
+      <a href="#dashboard">لوحة التحكم</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <span class="tag">✦ عالم جديد لاستضافة البوتات</span>
+    <h1>استضافة بوتاتك<br><span>بأسلوب Black Star</span></h1>
+    <p>
+      نعمل على بناء منصة عربية لإدارة بوتات Discord،
+      بواجهة سهلة وتصميم داكن ولمسات زرقاء.
+    </p>
+    <a class="btn" href="#dashboard">استكشف المنصة</a>
+    <a class="btn secondary" href="#features">اكتشف المميزات</a>
+  </section>
+
+  <main>
+    <section class="preview" id="dashboard">
+      <div class="preview-top">
+        <strong>لوحة التحكم</strong>
+        <span class="status">● عرض تجريبي</span>
+      </div>
+      <div class="stats">
+        <div class="stat">
+          <small>البوتات المسجلة</small>
+          <h3>قريبًا</h3>
+        </div>
+        <div class="stat">
+          <small>حالة المنصة</small>
+          <h3>تجريبية</h3>
+        </div>
+        <div class="stat">
+          <small>إدارة الحسابات</small>
+          <h3>قريبًا</h3>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="section-title">
+        <h2>مصممة لتناسبك</h2>
+        <p>هذه بداية المنصة، وستضاف وظائف التشغيل بعد تجهيز الخادم.</p>
+      </div>
+
+      <div class="features">
+        <article class="feature">
+          <div class="icon">🤖</div>
+          <h3>إدارة البوتات</h3>
+          <p>واجهة مستقبلية لعرض مشاريع البوتات وإدارتها.</p>
+        </article>
+
+        <article class="feature">
+          <div class="icon">⚡</div>
+          <h3>سهولة الاستخدام</h3>
+          <p>تصميم واضح يناسب الجوال والكمبيوتر.</p>
+        </article>
+
+        <article class="feature">
+          <div class="icon">🛡️</div>
+          <h3>الأمان</h3>
+          <p>تجهيز صلاحيات المستخدمين وحماية ملفاتهم في المراحل التالية.</p>
+        </article>
+      </div>
+
+      <div class="notice">
+        تنبيه: هذا إصدار واجهة تجريبي فقط. لا يدعم حاليًا إنشاء الحسابات
+        أو رفع الملفات أو تشغيل البوتات. ستحتاج هذه الوظائف إلى خادم خلفي
+        وقاعدة بيانات ونظام حماية قبل فتح التسجيل للعامة.
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Black Star Hosting — جميع الحقوق محفوظة
+  </footer>
+</body>
+</html>
